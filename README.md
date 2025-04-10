@@ -209,8 +209,12 @@ npm run test:chrome:allureHistoryReport
 ```
 You can find the report in [allure-report](./allure-report) folder. However, in order to get it displayed you either need to run from
 already running local web server form your IDE (Webstorm this will be Right Click on alure-report/index.htm, from the context menu choose
-Open In > Browesr and pick your browser). For VS Code depends on your setup.
-Or run
+Open In > Browesr and pick your browser). For VS Code depends on your setup. If for some reason you don't see the folder run
+```shell
+npm run generateReports
+```
+and rerun the previous command 
+To display the report you can also run
 
 ```shell
 npm run generateAndShowReports
