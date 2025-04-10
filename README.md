@@ -83,20 +83,21 @@ _Expected Result:_ Form can be submitted and user profile create
 
 
 ## Install
+Install Node 23.6 or newer
 
-
+Run
 ```shell
-  yarn install
+  npm install
 ```
 
 Install Playwright browsers
 ```shell
-  yarn playwright install
+  npm playwright install
 ```
 
 Install Playwright operating system dependencies requires sudo / root
 ```shell
-  sudo yarn playwright install-deps
+  sudo npm playwright install-deps
 ```
 
 [More info on running tests](https://playwright.dev/docs/running-tests)
@@ -110,13 +111,13 @@ for additional report  install
 Auto-generate tests with Codegen.
 
 ```shell
-  yarn playwright codegen
+  npm playwright codegen
 ```
 
 Starts the interactive UI mode. This also can be set in the config.
 
 ```shell
-  yarn playwright test --ui
+  npm playwright test --ui
 ```
 
 
@@ -161,32 +162,32 @@ https://playwright.dev/docs/api/class-electronapplication#electron-application-e
 Runs the end-to-end tests (all projects):
 
 ``` shell
-  yarn playwright test
+  npm playwright test
 ```
 
 Runs the tests only on Desktop Chrome.
 
 ```shell
-  yarn test:chromium
+  npm test:chromium
 ```
 
 To run Electron tests:
 
 ```shell
-  yarn test:electron
+  npm test:electron
 ```
 
 
 Runs the tests in framework debug mode.
 
 ```
-yarn playwright test --project=localChromium  --debug
+npm playwright test --project=chrome  --debug
 ```
 
 Runs the tests in a specific file:
 
 ```shell
-  yarn playwright test example
+  npm playwright test example
 ```
 
 ## Debug
@@ -198,13 +199,13 @@ Add `DEBUG=pw:api` as an environment variable.
 Running:
 
 ```shell
-  yarn test:chromium
+  npm test:chromium
 ```
 
 will generate HTML and Allure reports. However, those reports are for a single run. In order to have history, which is more useful, run:
 
 ```shell
-yarn test:allureHistoryReport
+npm test:allureHistoryReport
 ```
 
 Or change it depending on your needs to enable history for the report that can show you around 20 executions. Additional info can be  
