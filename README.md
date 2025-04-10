@@ -75,7 +75,7 @@ Steps to reproduce:
 4. Verify form submission
 
 _Actual Result:_ Form is not submitted and alert dialog is displayed
-![image](./documents/images/alert_def.png)
+<img alt="image" height="480" src="./documents/images/alert_def.png" width="640"/>
 
 _Expected Result:_ Form can be submitted and user profile create
 
@@ -168,13 +168,13 @@ Runs the end-to-end tests (all projects):
 Runs the tests only on Desktop Chrome.
 
 ```shell
-  npm test:chromium
+  npm run test:chromium
 ```
 
 To run Electron tests:
 
 ```shell
-  npm test:electron
+  npm run test:electron
 ```
 
 
@@ -187,7 +187,7 @@ npm playwright test --project=chrome  --debug
 Runs the tests in a specific file:
 
 ```shell
-  npm playwright test example
+  npm run playwright test example
 ```
 
 ## Debug
@@ -199,16 +199,25 @@ Add `DEBUG=pw:api` as an environment variable.
 Running:
 
 ```shell
-  npm test:chromium
+  npm run test:chromium
 ```
 
 will generate HTML and Allure reports. However, those reports are for a single run. In order to have history, which is more useful, run:
 
 ```shell
-npm test:allureHistoryReport
+npm run test:chrome:allureHistoryReport
 ```
+You can find the report in [allure-report](./allure-report) folder. However, in order to get it displayed you either need to run from
+already running local web server form your IDE (Webstorm this will be Right Click on alure-report/index.htm, from the context menu choose
+Open In > Browesr and pick your browser). For VS Code depends on your setup.
+Or run
 
-Or change it depending on your needs to enable history for the report that can show you around 20 executions. Additional info can be  
+```shell
+npm run generateAndShowReports
+```
+<img alt="image" height="480" src="./documents/images/alure_re.png" width="920"/>
+To display te report. Note that this is dependat on the java installed on you machine, see above
+Change it depending on your needs to enable history for the report that can show you around 20 executions. Additional info can be  
 added to this report. For more information, see: https://allurereport.org/docs/playwright-reference/
 
 
