@@ -1,0 +1,19 @@
+{
+  "firstNameInput": "#firstName",
+  "lastNameInput": "#lastName",
+  "emailInput": "#email",
+  "passwordInput": "#password",
+  "confirmPasswordInput": "#confirmPassword",
+  "genderMaleRadio": "#male",
+  "genderFemaleRadio": "#female",
+  "genderPreferNotToSay": "#preferNotToSay",
+  "dobInput": "#dob",
+  "phoneInput": "#phone",
+  "addressTextarea": "#address",
+  "linkedInInput": "#linkedIn",
+  "gitHubInput": "#github",
+  "submitButton": { "role": "input", "value": "Submit" },
+  "successMessage": "p.success",
+  "errorFeedbackClass": ".invalid-feedback",
+  "formGroupSelector": ".form-group"
+}
