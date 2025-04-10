@@ -104,7 +104,7 @@ Install Playwright operating system dependencies requires sudo / root
 
 for additional report  install
 ```shell
-  npm install -g allure-commandline
+  npm install allure-commandline
 ```
 ## Extra tooling
 

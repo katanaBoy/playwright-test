@@ -34,6 +34,7 @@
     "@types/node": "^22.14.0"
   },
   "dependencies": {
+    "allure-commandline": "^2.33.0",
     "allure-js-commons": "^3.2.1",
     "allure-playwright": "^3.2.1",
     "dotenv": "^16.4.7",
