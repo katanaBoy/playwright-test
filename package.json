@@ -1,0 +1,42 @@
+{
+  "name": "playwright-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "removeReportDirs": "rm -rf allure-results playwright-report test-results",
+    "allTests": "playwright test",
+    "generateReports": "allure generate --clean",
+    "test:chromium": "playwright test --project=chrome",
+    "test:chromium-debug": "playwright test --project=localChromium --debug",
+    "clean:results": "rm -rf allure-results",
+    "prep:history": "if [ -d allure-report/history ]; then cp -R allure-report/history allure-results; fi",
+    "test:allureHistoryReport": "npm run prep:history && npm run allTests && npm run allure generate --clean -o allure-report allure-results",
+    "test:electron:allureHistoryReport": "npm run prep:history && npm run  test:electron && npm run allure generate --clean -o allure-report allure-results",
+    "generateAndShowReports": "allure serve allure-results",
+    "test:autogen": "playwright codegen"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katanaBoy/playwright-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/katanaBoy/playwright-test/issues"
+  },
+  "homepage": "https://github.com/katanaBoy/playwright-test#readme",
+  "devDependencies": {
+    "@faker-js/faker": "^9.6.0",
+    "@playwright/test": "^1.51.1",
+    "@types/node": "^22.14.0"
+  },
+  "dependencies": {
+    "allure-js-commons": "^3.2.1",
+    "allure-playwright": "^3.2.1",
+    "dotenv": "^16.4.7",
+    "node-color-log": "^12.0.1"
+  }
+}
