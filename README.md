@@ -159,7 +159,7 @@ https://playwright.dev/docs/locators#quick-guide
 https://playwright.dev/docs/api/class-electronapplication#electron-application-evaluate
 
 ## Running test
-Runs the end-to-end tests (all projects):
+Runs the end-to-end tests (all projects - in this case project means multiple browsers):
 
 ``` shell
   npm playwright test
@@ -170,13 +170,6 @@ Runs the tests only on Desktop Chrome.
 ```shell
   npm run test:chromium
 ```
-
-To run Electron tests:
-
-```shell
-  npm run test:electron
-```
-
 
 Runs the tests in framework debug mode.
 
