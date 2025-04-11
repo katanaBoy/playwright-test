@@ -180,7 +180,11 @@ npm playwright test --project=chrome  --debug
 Runs the tests in a specific file:
 
 ```shell
-  npm run playwright test example
+  npm run playwright test example.spec.js
+```
+Run specific test
+```shell
+  npm run playwright test -g "Verify successful profile creation (Mandatory fields only)"
 ```
 
 ## Debug
@@ -218,5 +222,19 @@ Change it depending on your needs to enable history for the report that can show
 added to this report. For more information, see: https://allurereport.org/docs/playwright-reference/
 
 
-## Improvements
+## Author notes
+This approach is overkill for a simple page, but the idea was to implement something that will be extendable and can be 
+used for a larger project. 
+
+Locators are intentionally out of the pageobjects since this approach allows you to change 
+them with configuration depending on the run environment. Example Run the same test on iOS or Android.
+Providing the data it this way allows you to change the data source when needed since if you add it in the test directly 
+if you decide to change it down the line it will be pain when there is large number of tests. 
+
+BasePage is there to help  share the common calls usually used directly from the underlying framework, if this was also 
+a real project I would create also base assertions class to help with the assertions. The reasoning behind is maintainability and also 
+the ability to change the underlying framework if needed. With as little test changes as possible.   
+
+All reports are enabled only for showcasing the options available in real project there will be additional steps moving them 
+to a storage or some hosting server OR change the whole reporting by using some database and Grafana.
 

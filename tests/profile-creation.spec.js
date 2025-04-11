@@ -28,6 +28,7 @@ test.describe('User Profile Creation Scenarios', () => {
         log.info(`Navigated to URL: ${finalUrlString}`);
         const finalUrl = new URL(finalUrlString);
 
+        // All those check directly used should be in extracted more info in the readme
         await expect(finalUrl.origin + finalUrl.pathname).toBe('https://qa-assessment.pages.dev/');
         log.debug('Verifying URL search parameters...');
         await expect(finalUrl.searchParams.get('firstName')).toBe(userDetails.firstName);
@@ -36,7 +37,11 @@ test.describe('User Profile Creation Scenarios', () => {
         await expect(finalUrl.searchParams.get('password')).toBe(userDetails.password);
         await expect(finalUrl.searchParams.get('confirmPassword')).toBe(userDetails.password);
 
-
+        /**
+         * The success message is hard to verify at the moment  because of the time that is on the screen
+         * there are some ways to access it, but it will make the test brittle and given te timeframe I don't think
+         * it is worth checking since it is only a message. If this was real scenario that needs testing will put more time in to it
+         */
     });
 
     test('Verify successful profile creation (All fields valid)', async ({ page }) => {
@@ -77,7 +82,6 @@ test.describe('User Profile Creation Scenarios', () => {
         await expect(finalUrl.searchParams.get('address')).toBe(userDetails.address);
         await expect(finalUrl.searchParams.get('linkedIn')).toBe(userDetails.linkedInUrl);
         await expect(finalUrl.searchParams.get('github')).toBe(userDetails.gitHubUrl);
-
 
     });
 
